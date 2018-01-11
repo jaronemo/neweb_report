@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="newweb_assign_custom">
+            <t t-call="report.html_container">
+                <h1 class="col-12 text-center">裝機暨派工單</h1>
+
+                <script type="text/javascript">
+                    var cfprint_addr = "127.0.0.1"; //打印服务器监听地址
+                    var _delay_close = -1; //打印完成后关闭窗口的延时时长(毫秒), -1则表示不关闭
+                    /**定义主表结构**/
+                    var _tablePack = {
+                    "Name": "Pack",
+                    "Cols":[
+                    { "type": "str", "size": 255, "name": "專案編號", "required": false },
+                    { "type": "str", "size": 50, "name": "裝機單號", "required": false },
+                    { "type": "str", "size": 50, "name": "客戶名稱", "required": false },
+                    { "type": "str", "size": 50, "name": "專屬業務", "required": false },
+                    { "type": "str", "size": 50, "name": "裝機地址", "required": false },
+                    { "type": "str", "size": 50, "name": "預定裝機日", "required": false },
+                    { "type": "str", "size": 50, "name": "裝機聯絡人", "required": false },
+                    { "type": "str", "size": 50, "name": "指派工程師", "required": false },
+                    { "type": "str", "size": 50, "name": "電話", "required": false },
+                    { "type": "str", "size": 50, "name": "手機", "required": false },
+                    { "type": "str", "size": 50, "name": "服務名稱", "required": false },
+                    { "type": "str", "size": 50, "name": "裝機及施工說明", "required": false },
+                    { "type": "str", "size": 50, "name": "附件", "required": false },
+                    { "type": "str", "size": 50, "name": "工作說明", "required": false },
+                    { "type": "str", "size": 50, "name": "派工需求說明", "required": false },
+                    { "type": "str", "size": 50, "name": "工程師完成說明", "required": false }
+                    ],
+                    "Data":[ ]
+                    };
+
+                    /**定义从表结构**/
+                    var _tablePackLines = {
+                    "Name": "PackLines",
+                    "Cols":[
+                    { "type": "str", "size": 50, "name": "機種", "required": false },
+                    { "type": "str", "size": 50, "name": "機型", "required": false },
+                    { "type": "str", "size": 50, "name": "料號", "required": false },
+                    { "type": "str", "size": 50, "name": "規格說明", "required": false },
+                    { "type": "str", "size": 50, "name": "數量", "required": false },
+                    { "type": "str", "size": 50, "name": "軟體版本", "required": false },
+                    { "type": "str", "size": 50, "name": "備註", "required": false }
+                    ],
+                    "Data":[ ]
+                    };
+                    <t t-foreach="docs" t-as="o">
+                        /*增加主表记录*/
+                        _tablePack.Data.push(
+                        {
+                        "專案編號":"<t t-esc="o.proj_no"/>",
+                        "裝機單號":"<t t-esc="o.assign_no"/>",
+                        "客戶名稱":"<t t-esc="o.proj_cus_name.name"/>",
+                        "專屬業務":"<t t-esc="o.proj_sale.name"/>",
+                        "裝機地址":"<t t-esc="o.setup_address"/>",
+                        "預定裝機日":"<t t-esc="o.setup_date"/>",
+                        "裝機聯絡人":"<t t-esc="o.setup_contact.name"/>",
+                        "指派工程師":"<t t-esc="o.assign_man"/>",
+                        "電話":"<t t-esc="o.setup_contact_phone"/>",
+                        "手機":"<t t-esc="o.setup_contact_mobile"/>",
+                        "服務名稱":"<t t-esc="o.service_name"/>",
+                        "裝機及施工說明":"<t t-esc="o.assign_no"/>",
+                        "附件":"<t t-esc="o.assign_no"/>",
+                        "工作說明":"<t t-esc="o.assign_no"/>",
+                        "派工需求說明":"<t t-esc="o.assign_no"/>",
+                        "工程師完成說明":"<t t-esc="o.assign_no"/>"
+                        });
+                        <t t-foreach="o.proj_complete_line" t-as="line">
+                            /**增加从表记录**/
+                            _tablePackLines.Data.push({
+                            "機種":"<t t-esc="line.man_id"/>",
+                            "機型":"<t t-esc="line.man_id"/>",
+                            "料號":"",
+                            "規格說明":"",
+                            "數量":"",
+                            "軟體版本":"",
+                            "備註":""
+
+                            });
+                        </t>
+                    </t>
+                    var _data = {"template": "assign_custom.fr3", "ver": 4, "Copies": 1, "Duplex": 0, "Preview": 1,
+                    "Tables":[]};
+                    _data["Tables"].push(_tablePack);
+                    _data["Tables"].push(_tablePackLines);
+                    var _reportData = JSON.stringify(_data); //转成json字符串
+
+                    console.log(_reportData);
+                    //生成数据之后，在cfprint_ext.js中会自动调用进行打印
+                </script>
+            </t>
+        </template>
+    </data>
+</odoo>
