@@ -11,6 +11,8 @@
     'data': [
         'report.xml',
         'report/newweb_assign_custom.xml',
+        'report/report_neweb_sale_order.xml',
+        'views/neweb_sale_order_report.xml',
     ],
 
 }
