@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="page">
+        <h3>Newebinfo 專案成本分析表暨申購單</h3>
+        <br/>
+        <br/>
+        <table class="table table-bordered">
+            <tr style="width:50%"/>
+            <td style="width:50%">客戶名稱：</td>
+            <td style="width:50%">申購單編號</td>
+            <tr style="width:50%"/>
+            <td>客戶專案/檔案名稱</td>
+            <td>專案編號：</td>
+            <tr/>
+            <td>客戶訂單/標按號碼：</td>
+            <td>提報版本： 報表狀態：</td>
+            <tr/>
+            <td>交貨方式：
+                <input type="checkbox" name="out" value="Y">一次交貨</input>
+                <input type="checkbox" name="out" value="N">可分批交貨</input>
+            </td>
+            <td>提報/修改日期：</td>
+            <tr/>
+            <td>預定交貨日期：</td>
+            <td>交易類別：</td>
+            <tr/>
+        </table>
+        <ul type="circle">
+            <li>藍新業務毛利分析</li>
+        </ul>
+        <table class="table table-bordered">
+            <td>銷貨收入</td>
+            <td></td>
+            <td>銷貨成本</td>
+            <td></td>
+            <td>銷貨毛利</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>專案收入</td>
+            <td></td>
+            <td>外包成本</td>
+            <td></td>
+            <td>專案利潤</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>其他收入</td>
+            <td></td>
+            <td>其他成本</td>
+            <td></td>
+            <td>其他利潤</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>建置收入</td>
+            <td></td>
+            <td>建置成本</td>
+            <td></td>
+            <td>建置利潤</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>維護收入</td>
+            <td></td>
+            <td>維護成本</td>
+            <td></td>
+            <td>維護利潤</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>維護人力收入</td>
+            <td></td>
+            <td>維護人力成本</td>
+            <td></td>
+            <td>維護人力利潤</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>利息收入</td>
+            <td></td>
+            <td>利息成本</td>
+            <td></td>
+            <td>利息利潤</td>
+            <td></td>
+            <td>毛利率</td>
+            <td></td>
+            <tr/>
+            <td>總收入</td>
+            <td></td>
+            <td>總外購成本</td>
+            <td></td>
+            <td>總毛利</td>
+            <td></td>
+            <td>總毛利率</td>
+            <td></td>
+            <tr/>
+
+        </table>
+        <ul type="circle">
+            <li>藍新預估進貨及採購成本明細分析</li>
+        </ul>
+        <table class="table table-bordered">
+            <td></td>
+            <td>產品組別</td>
+            <td>機種-機型</td>
+            <td>序號</td>
+            <td>料號</td>
+            <td>規格說明</td>
+            <td>數量</td>
+            <td>單價</td>
+            <td>小計</td>
+            <td>報價廠商</td>
+            <td>請款日</td>
+            <td>成本類型</td>
+            <td>保固期限</td>
+            <tr/>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr/>
+            <td colspan="4">合計（未稅）：</td>
+            <td colspan="5">5％營業稅：</td>
+            <td colspan="4">總計（含稅）：</td>
+            <tr/>
+        </table>
+        <ul type="circle">
+            <li>裝機及派工說明</li>
+        </ul>
+        <table class="table table-bordered">
+            <td>1.工程師內部組裝：
+                <input type="checkbox" name="ass" value="Y">是</input>
+                <input type="checkbox" name="ass" value="N">否</input>
+            </td>
+            <td>2.工程師配工：
+                <input type="checkbox" name="ass1" value="Y">需至客戶端裝機</input>
+                <input type="checkbox" name="ass1" value="N">否</input>
+            </td>
+            <td>3.其他：</td>
+        </table>
+        <ul type="circle">
+            <li>送貨說明</li>
+        </ul>
+        <table class="table table-bordered">
+            <td>
+                <input type="checkbox" name="pick" value="B">貨送藍新</input>
+
+            </td>
+            <td>
+                <input type="checkbox" name="pick" value="C">直送客戶端</input>
+
+            </td>
+            <td>
+                <input type="checkbox" name="pick" value="O">其他</input>
+            </td>
+        </table>
+        <ul type="circle">
+            <li>開立發票說明</li>
+        </ul>
+        <table class="table table-bordered">
+            <td>
+                <input type="checkbox" name="account" value="A">隨貨開立發票</input>
+
+            </td>
+            <td>
+                <input type="checkbox" name="account" value="B">待業務通知</input>
+
+            </td>
+            <td>
+                <input type="checkbox" name="account" value="C">其他</input>
+            </td>
+            <tr/>
+            <td colspan="3">說明：發票請註明採購單號</td>
+        </table>
+        <div>
+            簽核：
+            <div class="row" style="padding-left:2%">
+                <table>
+                    <th style="width:22%">
+                        <strong style="font-size:16px;">董事長:</strong>
+                    </th>
+                    <th style="width:22%">
+                        <strong style="font-size:16px;">總經理:</strong>
+                    </th>
+                    <th style="width:22%">
+                        <strong style="font-size:16px;">副總:</strong>
+                    </th>
+                    <th style="width:22%">
+                        <strong style="font-size:16px;">業務協理:</strong>
+                    </th>
+                    <th style="width:21%">
+                        <strong style="font-size:16px;">專案負責人:</strong>
+                    </th>
+                    <tr/>
+                </table>
+            </div>
+            <br/>
+            <br/>
+            核決權限：SVC0605-043
+            <br/>
+            <div class="col-xs-6" style="padding:0px">
+                1.30萬元（含）以下且銷貨GP 8%以上->單位主管
+                <br/>
+                3.30萬～120萬元（含）且銷貨GP 8%以上->副總級主管
+                <br/>
+                5.120萬～1500萬元（含）以上->總經理
+                <br/>
+
+            </div>
+            <div class="col-xs-6" style="padding:0px">
+                2.30萬元（含）以下且銷貨GP 8%以下->副總級主管
+                <br/>
+                4.30萬～120萬元（含）且銷貨GP 8%以下->總經理
+                <br/>
+                6.1500萬元以上->董事長
+                <br/>
+            </div>
+        </div>
+
+
+    </div>
+</t>

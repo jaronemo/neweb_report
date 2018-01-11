@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="page">
+        <h2>Newebinfo 申購單</h2>
+        <div class="row">
+            申購單編號：
+            <div class="col-xs-4">員工：</div>
+            <div class="col-xs-4">分機：</div>
+            <div class="col-xs-4">部門代號：</div>
+        </div>
+
+    </div>
+</t>

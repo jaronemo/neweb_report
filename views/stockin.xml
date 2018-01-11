@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 30px;" />
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md6 col-lg-6">
+                <img class="img img-responsive" src="/sale/static/img/title-2.png" />
+                <div class="row" style="border-bottom: 1px solid black;">
+                    <h2 class="text-center">
+                    
+                </h2>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                <small>        
+                <div t-field="o.company_id.partner_id.street"/>
+                <div><span t-field="o.company_id.partner_id.city"/> <span t-field="o.company_id.partner_id.zip"/> <span t-field="o.company_id.partner_id.country_id"/></div>
+                <div t-field="o.company_id.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;phone&quot;, &quot;fax&quot;, &quot;website&quot;, &quot;email&quot;], &quot;no_marker&quot;: false}"/>
+                
+            </small>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="text-center">進貨通知單</h2>
+        <div class="row">
+            <div class="col-xs-9">採購單編號：</div>
+            <div class="col-xs-3">進貨日期：</div>
+            <div class="col-xs-12">進貨廠商：</div>
+            <div class="col-xs-12">進貨原因：</div>
+        </div>
+        <table class="table table-bordered">
+            <td></td>
+            <td>機種</td>
+            <td>機型</td>
+            <td>料號</td>
+            <td>規格說明</td>
+            <td>數量</td>
+            <td>備註</td>
+            <td>序號</td>
+            <td>測試狀況</td>
+            <tr/>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr/>
+            <td colspan="9">說明：</td>
+        </table>        
+    </div>
+    <div class="footer">
+            <table>
+                <table>
+                <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <strong style="font-size:16px;">部門:</strong>
+                </th>
+                <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <strong style="font-size:16px;">製單人:</strong>
+                </th>
+                <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <strong style="font-size:16px;">倉管:</strong>
+                </th>
+                <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <strong style="font-size:16px;">測試工程師:</strong>
+                </th>
+
+                <tr/>
+            </table>
+
+                <tr/>
+            </table>
+        </div>
+</t>

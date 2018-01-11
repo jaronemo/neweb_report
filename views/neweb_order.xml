@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 30px;" />
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md6 col-lg-6">
+                <img class="img img-responsive" src="/sale/static/img/title-2.png" />
+                <div class="row" style="border-bottom: 1px solid black;">
+                    <h2 class="text-center">
+                    
+                </h2>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                <small>        
+                <div t-field="o.company_id.partner_id.street"/>
+                <div><span t-field="o.company_id.partner_id.city"/> <span t-field="o.company_id.partner_id.zip"/> <span t-field="o.company_id.partner_id.country_id"/></div>
+                <div t-field="o.company_id.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;phone&quot;, &quot;fax&quot;, &quot;website&quot;, &quot;email&quot;], &quot;no_marker&quot;: false}"/>
+                
+            </small>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="text-center">ORDER LIST</h2>
+        <div class="row">
+            <div class="col-xs-9">Seller：</div>
+            <div class="col-xs-3">P/O No.:：</div>
+            <div class="col-xs-9">ATTN：</div>
+            <div class="col-xs-3">Date：</div>
+            <div class="col-xs-12">TEL：</div>
+            <div class="col-xs-12">FAX：</div>
+        </div>
+        <table class="table table-bordered">
+            <td></td>
+            <td>Type</td>
+            <td>MDL</td>
+            <td>FC</td>
+            <td>Descriptions</td>
+            <td>Qty</td>
+            <td>Unit Price</td>
+            <td>Amount</td>
+
+            <tr/>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <tr/>
+            <td colspan="6">1.PID：<br/>2.Comment:</td>
+            <td>Total Price</td>
+            <td></td>
+        </table>
+        <div>
+            1. Total Invoice Amount is<br/>
+            2. Warranty: <br/>
+            3. Payment: <br/>
+            4. Comment: <br/>
+            <br/>
+            <br/>
+            </div>
+    </div>
+    <div class="footer">
+            <table>
+                <table>
+                    <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
+                <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <strong style="font-size:16px;">Seller:</strong>
+                </th>
+                <th class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <strong style="font-size:16px;">Buyer:</strong>
+                </th>
+                <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2"/>
+                <tr/>
+            </table>
+
+                <tr/>
+            </table>
+        </div>
+</t>

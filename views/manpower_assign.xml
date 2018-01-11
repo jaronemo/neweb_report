@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo"
+                     style="max-height: 30px;"/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md6 col-lg-6">
+                <img class="img img-responsive" src="/sale/static/img/title-2.png"/>
+                <div class="row" style="border-bottom: 1px solid black;">
+                    <h2 class="text-center">
+
+                    </h2>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                <small>
+                    <div t-field="o.company_id.partner_id.street"/>
+                    <div><span t-field="o.company_id.partner_id.city"/> <span t-field="o.company_id.partner_id.zip"/> 
+                        <span t-field="o.company_id.partner_id.country_id"/>
+                    </div>
+                    <div t-field="o.company_id.partner_id"
+                         t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;phone&quot;, &quot;fax&quot;, &quot;website&quot;, &quot;email&quot;], &quot;no_marker&quot;: false}"/>
+
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="row">
+        <div class="col-xs-6"> 申請日期：<span style="border-bottom: 1px solid black;padding-left:20px"/>年<span style="border-bottom: 1px solid black;padding-left:20px"/>月<span style="border-bottom: 1px solid black;padding-left:20px"/>日</div>
+        <div class="col-xs-6 pull-right"> 派工單單號：<span style="border-bottom: 1px solid black;padding-left:120px"/></div>
+         </div>
+        <br/>
+        <table style="margin:0px" class="table table-bordered">
+            <td>客戶名稱</td>
+            <td></td>
+            <td>地點</td>
+            <td></td>
+            <tr/>
+            <td>客戶聯絡人</td>
+            <td></td>
+            <td>聯絡電話</td>
+            <td></td>
+            <tr/>
+            <td>派工時間</td>
+            <td></td>
+            <td>預估所需時數</td>
+            <td> <span style="padding-left:20px"/>人<span style="padding-left:20px"/>天<span style="padding-left:20px"/>時</td>
+            <tr/>
+            <td>服務類別</td>
+            <td colspan="3"></td>
+            <tr/>
+            <td colspan="4" style="height: 300px;">派工需求說明：（業務填寫）</td>
+        </table>
+        <table style="margin:0px" class="table table-bordered">
+            <td rowspan="3" style="width:10px">技<br/>術<br/>副<br/>總</td>
+            <td rowspan="3"></td>
+            <td>工程部主管</td>
+            <td></td>
+            <td>申請人</td>
+            <td></td>
+            <tr/>
+            <td>指派工程師</td>
+            <td></td>
+            <td>業務主管</td>
+            <td></td>
+            <tr/>
+            <td colspan="6" style="height: 300px;">處理狀況說明：（工程師填寫）</td>
+            <tr/>
+
+        </table>
+        <table class="table table-bordered">
+            <td style="width:70px">實際完<br/>成日期</td>
+            <td></td>
+            <td style="width:70px">實際完<br/>成時數</td>
+            <td></td>
+            <td style="width:70px">工程師<br/>簽名</td>
+            <td></td>
+        </table>
+
+
+
+    </div>
+</t>

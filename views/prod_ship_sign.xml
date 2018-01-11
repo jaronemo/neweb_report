@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 30px;" />
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md6 col-lg-6">
+                <img class="img img-responsive" src="/sale/static/img/title-2.png" />
+                <div class="row" style="border-bottom: 1px solid black;">
+                    <h2 class="text-center">
+                    
+                </h2>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                <small>        
+                <div t-field="o.company_id.partner_id.street"/>
+                <div><span t-field="o.company_id.partner_id.city"/> <span t-field="o.company_id.partner_id.zip"/> <span t-field="o.company_id.partner_id.country_id"/></div>
+                <div t-field="o.company_id.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;phone&quot;, &quot;fax&quot;, &quot;website&quot;, &quot;email&quot;], &quot;no_marker&quot;: false}"/>
+                
+            </small>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="text-center">貨品出貨簽收單</h2>
+        <div class="row">
+            <div class="col-xs-9">客戶名稱：</div>
+            <div class="col-xs-3">專案編號:：</div>
+            <div class="col-xs-9">聯絡人：</div>
+            <div class="col-xs-3">出貨日期：</div>
+            <div class="col-xs-12">聯絡電話：</div>
+
+            <div class="col-xs-12">公司地址：</div>
+            <br/>
+            <div class="col-xs-12">出貨原因：</div>
+        </div>
+        <table class="table table-bordered">
+            <td></td>
+            <td>機種</td>
+            <td>機型</td>
+            <td>料號</td>
+            <td>規格說明</td>
+            <td>數量</td>
+            <td>備註</td>
+            <tr/>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr/>
+        </table>
+        <div class="row">
+            <div>
+            備註：<br/>
+            <div class="col-xs-12" style="border-bottom: 1px solid black;"/>
+            </div>
+           <div style="padding:50px;font-size:20px" >
+               出貨人：<span style="border-bottom: 1px dashed black;padding-left:180px"/><span style="padding:50px"/>
+                簽收人：<span style="border-bottom: 1px dashed black;padding-left:180px"/>
+                <br/>
+                <br/>
+                <br/>
+               確認無誤後請回傳至(02)-2795-5510<br/>
+               或請郵寄至台北市內湖區114行忠路42號2樓<br/>
+               聯絡人：<br/>
+               Mail：<br/>
+               謝謝!!
+
+            
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="text-center">第一聯：客戶簽回聯（白） 第二聯：客戶簽收聯（紅） 第三聯：會計請款聯（黃）</div>
+    </div>
+</t>

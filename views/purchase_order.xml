@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 30px;" />
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md6 col-lg-6">
+                <img class="img img-responsive" src="/sale/static/img/title-2.png" />
+                <div class="row" style="border-bottom: 1px solid black;">
+                    <h2 class="text-center">
+                    
+                </h2>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                <small>        
+                <div t-field="o.company_id.partner_id.street"/>
+                <div><span t-field="o.company_id.partner_id.city"/> <span t-field="o.company_id.partner_id.zip"/> <span t-field="o.company_id.partner_id.country_id"/></div>
+                <div t-field="o.company_id.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;phone&quot;, &quot;fax&quot;, &quot;website&quot;, &quot;email&quot;], &quot;no_marker&quot;: false}"/>
+                
+            </small>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="text-center">採購單</h2>
+        <div class="row">
+            <div class="col-xs-9">廠商名稱：</div>
+            <div class="col-xs-3">採購編號:：</div>
+            <div class="col-xs-9">聯絡人：</div>
+            <div class="col-xs-3">採購日期：</div>
+            <div class="col-xs-12">聯絡電話：</div>
+            <div class="col-xs-12">傳真號碼：</div>
+            <div class="col-xs-12">公司地址：</div>
+        </div>
+        <table class="table table-bordered">
+            <td></td>
+            <td>機種</td>
+            <td>機型</td>
+            <td>料號</td>
+            <td>規格說明</td>
+            <td>保固期限</td>
+            <td>數量</td>
+            <td>單價</td>
+            <td>總價</td>
+            <tr/>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr/>
+            <td colspan="7" rowspan="5">1.專案編號：<br/>2.備註:</td>
+            <td>Total Price</td>
+            <td></td>
+            <tr/>
+            <td>營業稅</td>
+            <td></td>
+            <tr/>
+            <td>總價</td>
+            <td></td>
+        </table>
+        <div class="row">
+            <div class="col-xs-6">
+            說明：<br/>
+            1.上列產品成交總價為新台幣 元整(含營業稅5%)<br/>
+            2.採購聯絡人：<br/>
+                付款條件：<br/>
+                說明：<br/>
+            3.發票抬頭：藍新資訊股份有限公司<br/>
+              發票寄送地址：台北市內湖區行忠路42號2樓<br/>
+              統一編號：24540267
+            </div>
+            <div class="col-xs-6">
+                4.交貨日期：<br/>
+                5.交貨地點：
+                公司名稱：藍新資訊股份有限公司<br/>
+                寄送地址：台北市內湖區行忠路42號2樓<br/>
+                電話:<br/>
+                6.其他：
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+
+                <table>
+                    <th style="width:40%">
+                    <strong style="font-size:16px;">廠商請二日內確認訂單<br/>後簽回，逾期視同接受</strong>
+                </th>
+                <th style="width:30%">
+                    <strong style="font-size:16px;">採購單位:</strong>
+                </th>
+                <th style="width:25%">
+                    <strong style="font-size:16px;">採購主管:</strong>
+                </th>
+               <th style="width:25%">
+                    <strong style="font-size:16px;">採購:</strong>
+                </th>
+            </table>
+
+        </div>
+</t>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<t t-name="">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 30px;" />
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md6 col-lg-6">
+                <img class="img img-responsive" src="/sale/static/img/title-2.png" />
+                <div class="row" style="border-bottom: 1px solid black;">
+                    <h2 class="text-center">
+                    
+                </h2>
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                <small>        
+                <div t-field="o.company_id.partner_id.street"/>
+                <div><span t-field="o.company_id.partner_id.city"/> <span t-field="o.company_id.partner_id.zip"/> <span t-field="o.company_id.partner_id.country_id"/></div>
+                <div t-field="o.company_id.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;phone&quot;, &quot;fax&quot;, &quot;website&quot;, &quot;email&quot;], &quot;no_marker&quot;: false}"/>
+                
+            </small>
+            </div>
+        </div>
+    </div>
+    <div class="page" style="font-size:">
+        <div class="row">
+        <div class="col-xs-3"/>
+        <div class="col-xs-6"><h2 class="text-center">銷售服務報價單</h2></div>
+        <div class="col-xs-3"/></div>
+        <div class="row">
+            <div class="col-xs-7">
+                <span >顧客名稱：</span><br/>
+                <span >聯絡人：</span><br/>
+                <span >聯絡電話：</span><br/>
+                <span >傳真電話：</span><br/>
+                <span >統一編號：</span>
+            </div>
+
+            <div class="col-xs-5">
+                <span>報價編號:：</span><br/>
+                <span>報價日期：</span><br/>
+                <span>聯絡人：</span><br/>
+                <span>聯絡電話：</span><br/>
+                <span>行動電話：</span>
+            </div>
+            </div>
+
+        <table class="table table-bordered">
+            <td>項次</td>
+            <td>產品型號</td>
+            <td>說明</td>
+            <td>數量</td>
+            <td>單價</td>
+            <td>總價</td>
+            <tr/>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <tr/>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td>小計：</td>
+            <td></td>
+            <tr/>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td>5%營業稅：</td>
+            <td></td>
+            <tr/>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td style="visibility:hidden"></td>
+            <td>總計：</td>
+            <td></td>
+            <tr/>
+        </table>
+        <div class="row">
+            <div >
+            1.付款方式：。<br/>
+            2.交貨期限：。<br/>
+            3.交貨地點：。<br/>
+                4.上列產品報價確認無誤，敬請  貴客戶簽名蓋章傳回，視同"正式訂購單"。<br/>
+                5.本報價有效期限為30天
+            </div>
+            <br/>
+            <br/>
+             客戶確認：<span style="border-bottom: 1px solid black;padding-left:180px"/><br/>
+            日<span style="padding-left:28px"/>期：<span style="border-bottom: 1px solid black;padding-left:180px"/>
+            </div></div>
+
+        <div>
+
+    </div>
+
+</t>
