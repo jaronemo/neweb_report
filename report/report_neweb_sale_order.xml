@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report id="action_neweb_sale_order_report"
+                model="sale.order"
+                string="報價單"
+                report_type="qweb-html"
+                name="neweb_project.sale_order_report_custom"
+                file="neweb_project.sale_order_report_custom"
+                />
+    </data>
+</odoo>
